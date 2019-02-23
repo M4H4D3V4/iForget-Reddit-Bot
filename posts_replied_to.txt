@@ -1,0 +1,1 @@
+//in here the bot saves unique post's code. So that bot do not repeditely comment again in same post.
