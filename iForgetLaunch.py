@@ -9,15 +9,14 @@ reddit = praw.Reddit(user_agent='iForgetBot v1.0',
                      username='iForgetBot',
                      password='**********')
 
-print("Which Sub you want to hunt?")
-sub = input()
+sub = input("Which Sub you want to hunt?")
 
-# we haven't run this code before so,
+# if we haven't run this code before
 if not os.path.isfile("posts_replied_to.txt"):
     posts_replied_to = []
 # If we have ready run this code, you know what I mean
 else:
-    # Read the file into the list and remove empty value
+    # Read the file into the list and extract posted, posts ids.
     with open("posts_replied_to.txt", "r") as f:
         posts_replied_to = f.read()
         posts_replied_to = posts_replied_to.split("\n")
